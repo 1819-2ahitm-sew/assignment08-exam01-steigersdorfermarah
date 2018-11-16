@@ -1,5 +1,7 @@
 package at.htl.exam01.document;
 
+import java.util.Scanner;
+
 public class Main {
 
     /**
@@ -21,7 +23,32 @@ public class Main {
      *
      * @param args
      */
+
+    static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
+
+        int anzahlBuch = 0;
+        int anzahlEmail = 0;
+        Document [] documents = new Document[3];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }
