@@ -29,27 +29,48 @@ public class Main {
 
         int anzahlBuch = 0;
         int anzahlEmail = 0;
-        Document [] documents = new Document[3];
+        String [] documents = new String[3];
+
+        documents[0] = "Buch: 'Harry Potter und der Stein der Weisen' von 'Rowlings'";
+        documents[1] = "Email: 'Bewerbung' von 'Susi' an 'CoolCompany'";
+        documents[2] = "Buch: 'lordOfTheRings' von 'Tolkien'";
+
+
+        readBook(documents);
+        printBook(documents,anzahlBuch, anzahlEmail);
 
 
 
+    }
+
+    private static void readBook(String[] documents) {
+        String [] elements = new String[1000];
 
 
+        for (int i = 0; i < documents.length; i++) {
+            elements = documents[i].split("'");
+
+        }
+
+       // System.out.println(elements);
+    }
+
+    private static void printBook(String[] documents, int anzahlBuch, int anzahlEmail) {
 
 
+        for (int i = 0; i < documents.length; i++) {
 
-
-
-
-
-
-
-
-
-
-
-
-
+            if (documents[i].startsWith("Buch")){
+                System.out.println(documents[i]);
+                anzahlBuch++;
+            }else if (documents[i].startsWith("Email")){
+                System.out.println(documents[i]);
+                anzahlEmail++;
+            }
+        }
+        System.out.println();
+        System.out.println("Anzahl Books: " + anzahlBuch);
+        System.out.println("Anzahl Eamil: " + anzahlEmail);
 
     }
 

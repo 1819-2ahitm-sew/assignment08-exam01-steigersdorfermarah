@@ -26,8 +26,6 @@ public class StringCompress {
         sc.print(text);
         System.out.println(anzahl);
 
-
-
     }
 
 
@@ -59,13 +57,11 @@ public class StringCompress {
             while (scanner.hasNextLine()){
                 System.out.println(scanner.nextLine());
 
-                for (int i = 0; i < anzahl; i++) {
-                    elements[i]  = scanner.next();
-                    System.out.println();
-                    System.out.println(elements[i]);
-                }
-
-
+//                for (int i = 0; i < anzahl; i++) {
+//                    elements[i]  = scanner.next();
+//                    System.out.println();
+//                    System.out.println(elements[i]);
+//                }
 
 
 
@@ -103,9 +99,6 @@ public class StringCompress {
     public void print(String[] lines) {
 
 
-
-
-
     }
 
     /**
@@ -121,7 +114,6 @@ public class StringCompress {
                 scanner.nextLine();
                 counter++;
             }
-
         } catch (FileNotFoundException e) {
             System.err.print(e);
         }
