@@ -21,7 +21,7 @@ public class StringCompress {
         String filename = "";
         StringCompress sc = new StringCompress();
         int anzahl = sc.getNoOfLines(filename, counter);
-        String[] text = sc.readFromFile(FILE_NAME, anzahl);
+        String[] lines = sc.readFromFile(FILE_NAME, anzahl);
 
 
     }
@@ -65,9 +65,7 @@ public class StringCompress {
                 lines[lineNo] = "";
 
                 for (int j = 0; j < noAnzahl; j++) {
-
                     lines[lineNo] += letter;
-
                 }
 
                 lineNo++;
@@ -76,7 +74,7 @@ public class StringCompress {
         } catch (FileNotFoundException e) {
             System.err.print(e.getMessage());
         }
-
+        print(lines);
 
 //        int counter = 0;
 //        String [] elements = new String[100];
@@ -117,7 +115,6 @@ public class StringCompress {
 //        return elements;
 
         return lines;
-
     }
 
     /**
@@ -127,8 +124,10 @@ public class StringCompress {
      */
     public void print(String[] lines) {
 
+        for (int i = 0; i < lines.length; i++) {
+            System.out.println(lines[i]);
 
-
+        }
         System.out.println("");
     }
 

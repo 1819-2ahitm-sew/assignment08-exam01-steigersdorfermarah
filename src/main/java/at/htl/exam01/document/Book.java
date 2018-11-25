@@ -28,4 +28,10 @@ public class Book extends Document {
     }
 
     //endregion
+
+
+    @Override
+    public String toString() {
+        return String.format("Book: %s, %s" ,getAuthor() , getTitle());
+    }
 }

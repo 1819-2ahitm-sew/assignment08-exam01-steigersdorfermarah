@@ -24,27 +24,41 @@ public class Main {
      * @param args
      */
 
-    static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
 
+        Book book1 = new Book("Rowlings", "Harry Potter und der Stein der Weisen");
+        Email email1 = new Email("Susi", "Bewerbung", "CoolCompany");
+        Book book2 = new Book("Tolkien", "lordOfTheRings");
+
+        Document[] documents = {book1,email1,book2};
+
+
+        printBook(documents);
+        readBook(documents);
+    }
+
+
+
+    private static void printBook(Document[] documents) {
+
+        for (int i = 0; i < documents.length; i++) {
+            System.out.println(documents[i]);
+        }
+    }
+
+    private static void readBook(Document[] documents) {
         int anzahlBuch = 0;
         int anzahlEmail = 0;
 
-
-
-    }
-
-    private static void readBook(String[] documents) {
-
-
-    }
-
-    private static void printBook(String[] documents, int anzahlBuch, int anzahlEmail) {
-
-
-
-
-    }
-
+        for (int i = 0; i < documents.length; i++) {
+            if (documents[i] instanceof Book) {
+                anzahlBuch++;
+            } else if (documents[i] instanceof Email) {
+                anzahlEmail++;
+            }
+        }
+        System.out.println("");
+        System.out.println("Anzahl Books: " + anzahlBuch);
+        System.out.println("Anzahl Emails: " + anzahlEmail);}
 
 }

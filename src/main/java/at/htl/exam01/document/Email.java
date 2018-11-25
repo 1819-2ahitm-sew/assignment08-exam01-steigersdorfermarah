@@ -37,4 +37,8 @@ public class Email extends Document {
 
     // endregion
 
+    @Override
+    public String toString() {
+        return String.format("Email: %s, %s, %s" , getAuthor() ,  getSubject() , getTo());
+    }
 }
